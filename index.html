@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Undergraduate researcher at Chungbuk National University working on world models, world-action models, agentic AI and tool-using language models.">
+<meta name="author" content="YongHwi Song">
+<link rel="canonical" href="https://thddydgnl.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2032%2032%22%3E%3Crect%20width%3D%2232%22%20height%3D%2232%22%20rx%3D%227%22%20fill%3D%22%231E5F58%22%2F%3E%3Ctext%20x%3D%2216%22%20y%3D%2223.5%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2220%22%20fill%3D%22%23FAFAFB%22%20text-anchor%3D%22middle%22%3EY%3C%2Ftext%3E%3C%2Fsvg%3E">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="YongHwi Song">
+<meta property="og:description" content="Undergraduate researcher at Chungbuk National University working on world models, world-action models, agentic AI and tool-using language models.">
+<meta property="og:url" content="https://thddydgnl.github.io/">
+<meta property="og:image" content="https://thddydgnl.github.io/profile.jpg">
+<meta name="twitter:card" content="summary">
+<style>
+  /* base reset (the Artifact host normally supplies this) */
+  :root{
+    color-scheme:light;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+  }
+  :root[data-theme="dark"]{color-scheme:dark}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark}}
+  body{margin:0}
+  img{max-width:100%}
+  [hidden]{display:none!important}
+</style>
+<title>YongHwi Song</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,500;0,600;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+
+<style>
+  :root{
+    --paper:#FAFAFB;
+    --surface:#F1F2F4;
+    --ink:#14171C;
+    --ink-soft:#585F69;
+    --ink-faint:#868D97;
+    --rule:#E0E3E7;
+    --accent:#1E5F58;
+    --accent-wash:#E4EEEC;
+    --chip:#EAECEF;
+
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;
+    --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+    --rail:150px;
+    --gutter:28px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#0F1216;
+      --surface:#171B21;
+      --ink:#E7E9EC;
+      --ink-soft:#9AA2AC;
+      --ink-faint:#6E7681;
+      --rule:#252B33;
+      --accent:#6FC0B4;
+      --accent-wash:#16302D;
+      --chip:#1E242B;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#0F1216;
+    --surface:#171B21;
+    --ink:#E7E9EC;
+    --ink-soft:#9AA2AC;
+    --ink-faint:#6E7681;
+    --rule:#252B33;
+    --accent:#6FC0B4;
+    --accent-wash:#16302D;
+    --chip:#1E242B;
+  }
+
+  *{box-sizing:border-box}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:15px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{
+    max-width:880px;
+    margin:0 auto;
+    padding-inline:24px;
+    padding-block:0 96px;
+  }
+  a{color:inherit}
+
+  /* ---------- masthead ---------- */
+  .masthead{
+    display:flex;
+    gap:32px;
+    align-items:center;
+    padding-block:64px 40px;
+  }
+  .portrait{
+    flex:0 0 auto;
+    width:132px;
+    height:132px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:50% 40%;
+    background:var(--surface);
+    box-shadow:0 0 0 1px var(--rule), 0 10px 28px -18px rgba(0,0,0,.55);
+  }
+  .ident{min-width:0}
+  h1{
+    font-family:var(--serif);
+    font-weight:500;
+    font-size:clamp(2.3rem,6.2vw,3.1rem);
+    line-height:1.04;
+    letter-spacing:-.018em;
+    margin:0 0 2px;
+    text-wrap:balance;
+  }
+  .hangul{
+    font-family:var(--serif);
+    font-size:1.05rem;
+    color:var(--ink-faint);
+    margin:0 0 14px;
+  }
+  .role{
+    margin:0;
+    color:var(--ink-soft);
+    font-size:.95rem;
+  }
+  .role strong{color:var(--ink);font-weight:600}
+
+  .contacts{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:18px;
+  }
+  .contacts a{
+    font-family:var(--mono);
+    font-size:.775rem;
+    letter-spacing:.01em;
+    text-decoration:none;
+    padding:6px 12px;
+    border:1px solid var(--rule);
+    border-radius:999px;
+    color:var(--ink-soft);
+    background:var(--paper);
+    transition:border-color .16s, color .16s, background .16s;
+  }
+  .contacts a:hover{color:var(--accent);border-color:var(--accent)}
+  .contacts a.primary{
+    background:var(--accent-wash);
+    border-color:transparent;
+    color:var(--accent);
+    font-weight:500;
+  }
+  .contacts a.primary:hover{border-color:var(--accent)}
+
+  /* ---------- sticky section nav ---------- */
+  nav{
+    position:sticky;
+    top:env(safe-area-inset-top,0px);
+    z-index:20;
+    background:color-mix(in srgb, var(--paper) 88%, transparent);
+    backdrop-filter:saturate(1.4) blur(10px);
+    border-bottom:1px solid var(--rule);
+    margin-inline:-24px;
+    padding-inline:24px;
+  }
+  .navscroll{
+    display:flex;
+    gap:22px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    padding-block:11px;
+  }
+  .navscroll::-webkit-scrollbar{display:none}
+  .navscroll a{
+    font-family:var(--mono);
+    font-size:.7rem;
+    text-transform:uppercase;
+    letter-spacing:.09em;
+    color:var(--ink-faint);
+    text-decoration:none;
+    white-space:nowrap;
+    transition:color .16s;
+  }
+  .navscroll a:hover{color:var(--accent)}
+
+  /* ---------- intro ---------- */
+  .intro{
+    font-family:var(--serif);
+    font-size:1.2rem;
+    line-height:1.68;
+    color:var(--ink);
+    max-width:62ch;
+    padding-block:48px 8px;
+    margin:0;
+  }
+  .intro em{color:var(--ink-soft)}
+
+  /* ---------- sections ---------- */
+  section{padding-block:44px 0}
+  h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:1.32rem;
+    letter-spacing:-.01em;
+    margin:0 0 4px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--rule);
+  }
+
+  .entry{
+    display:grid;
+    grid-template-columns:var(--rail) 1fr;
+    gap:0 var(--gutter);
+    padding-block:20px;
+    border-bottom:1px solid color-mix(in srgb, var(--rule) 55%, transparent);
+  }
+  .entry:last-child{border-bottom:0}
+  .when{
+    font-family:var(--mono);
+    font-size:.735rem;
+    line-height:1.5;
+    letter-spacing:.005em;
+    color:var(--ink-faint);
+    font-variant-numeric:tabular-nums;
+    padding-top:4px;
+  }
+  .what h3{
+    font-size:1rem;
+    font-weight:600;
+    margin:0 0 3px;
+    line-height:1.4;
+    text-wrap:balance;
+  }
+  .where{
+    color:var(--ink-soft);
+    font-size:.9rem;
+    margin:0 0 6px;
+  }
+  .what p{margin:0;color:var(--ink-soft);font-size:.9rem;max-width:60ch}
+  .what p + p{margin-top:6px}
+  .gpa{
+    font-family:var(--mono);
+    font-size:.78rem;
+    color:var(--ink-soft);
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---------- publications ---------- */
+  .subhead{
+    font-family:var(--mono);
+    font-size:.68rem;
+    text-transform:uppercase;
+    letter-spacing:.11em;
+    color:var(--ink-faint);
+    margin:26px 0 2px;
+  }
+  ol.pubs{
+    list-style:none;
+    margin:0;
+    padding:0;
+    counter-reset:pub;
+  }
+  ol.pubs li{
+    display:grid;
+    grid-template-columns:var(--rail) 1fr;
+    gap:0 var(--gutter);
+    padding-block:18px;
+    border-bottom:1px solid color-mix(in srgb, var(--rule) 55%, transparent);
+  }
+  ol.pubs li:last-child{border-bottom:0}
+  .status{
+    font-family:var(--mono);
+    font-size:.68rem;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--accent);
+    background:var(--accent-wash);
+    border-radius:4px;
+    padding:3px 8px;
+    justify-self:start;
+    align-self:start;
+    margin-top:4px;
+    white-space:nowrap;
+  }
+  .status.quiet{color:var(--ink-faint);background:var(--chip)}
+  .ptitle{
+    font-family:var(--serif);
+    font-size:1.08rem;
+    line-height:1.45;
+    margin:0 0 4px;
+    text-wrap:balance;
+  }
+  .authors{font-size:.875rem;color:var(--ink-soft);margin:0 0 3px}
+  .authors .me{color:var(--ink);font-weight:600}
+  .venue{font-size:.85rem;color:var(--ink-faint);margin:0;font-style:italic}
+  .fnote{
+    font-family:var(--mono);
+    font-size:.7rem;
+    color:var(--ink-faint);
+    margin:18px 0 0;
+  }
+
+  /* ---------- skills ---------- */
+  .skills{
+    display:grid;
+    grid-template-columns:var(--rail) 1fr;
+    gap:0 var(--gutter);
+    padding-block:18px;
+    border-bottom:1px solid color-mix(in srgb, var(--rule) 55%, transparent);
+  }
+  .skills:last-of-type{border-bottom:0}
+  .skills dt{
+    font-family:var(--mono);
+    font-size:.735rem;
+    line-height:1.5;
+    color:var(--ink-faint);
+    padding-top:5px;
+  }
+  .tags{display:flex;flex-wrap:wrap;gap:6px;margin:0}
+  .tags span{
+    font-size:.8rem;
+    background:var(--chip);
+    color:var(--ink-soft);
+    border-radius:5px;
+    padding:3px 9px;
+    line-height:1.5;
+  }
+
+  /* ---------- footer ---------- */
+  footer{
+    margin-top:64px;
+    padding-top:22px;
+    border-top:1px solid var(--rule);
+    font-family:var(--mono);
+    font-size:.7rem;
+    color:var(--ink-faint);
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px 18px;
+    justify-content:space-between;
+  }
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--accent)}
+
+
+  /* ---------- theme toggle + reveal ---------- */
+  .navbar{display:flex;align-items:center;gap:14px}
+  .navscroll{flex:1 1 auto;min-width:0}
+  .themetoggle{
+    flex:0 0 auto;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:32px;height:32px;
+    padding:0;
+    border:1px solid var(--rule);
+    border-radius:8px;
+    background:var(--paper);
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:color .16s, border-color .16s;
+  }
+  .themetoggle:hover{color:var(--accent);border-color:var(--accent)}
+  .themetoggle svg{width:15px;height:15px;display:block}
+
+  .contacts button{
+    font-family:var(--mono);
+    font-size:.775rem;
+    letter-spacing:.01em;
+    padding:6px 12px;
+    border:1px dashed var(--rule);
+    border-radius:999px;
+    color:var(--ink-faint);
+    background:var(--paper);
+    cursor:pointer;
+    transition:border-color .16s, color .16s;
+  }
+  .contacts button:hover{color:var(--accent);border-color:var(--accent)}
+  .contacts a.revealed{border-style:solid;border-color:var(--rule);color:var(--ink-soft)}
+
+  :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:3px}
+
+  /* ---------- narrow ---------- */
+  @media (max-width:720px){
+    :root{--rail:auto}
+    .masthead{
+      flex-direction:column;
+      align-items:flex-start;
+      gap:22px;
+      padding-block:44px 32px;
+    }
+    .portrait{width:104px;height:104px}
+    .entry, ol.pubs li, .skills{grid-template-columns:1fr;gap:6px}
+    .when{padding-top:0;order:-1}
+    .status{margin-top:0;margin-bottom:2px}
+    .skills dt{padding-top:0}
+    .intro{font-size:1.1rem;padding-block:36px 4px}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{transition:none!important;scroll-behavior:auto!important}
+  }
+  html{scroll-behavior:smooth;scroll-padding-top:60px}
+
+  @media print{
+    nav,.contacts,footer{display:none}
+    body{background:#fff;color:#000;font-size:10.5pt}
+    .wrap{max-width:none;padding:0}
+    section{padding-block:18px 0;break-inside:avoid}
+    .entry,ol.pubs li{break-inside:avoid}
+  }
+</style>
+
+<script>
+(function(){
+  var t=null;
+  try{ t=localStorage.getItem('cv-theme'); }catch(e){}
+  if(t!=='dark'&&t!=='light'){
+    t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';
+  }
+  document.documentElement.setAttribute('data-theme',t);
+})();
+</script>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <img class="portrait" src="profile.jpg" alt="YongHwi Song">
+    <div class="ident">
+      <h1>YongHwi Song</h1>
+      <p class="hangul">송용휘</p>
+      <p class="role">B.S. Candidate, <strong>Chungbuk National University</strong><br>
+      School of Information and Communication Engineering · Cheongju, Korea</p>
+      <div class="contacts">
+        <a class="primary" href="YongHwi_Song_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+        <a href="mailto:thddydgnl1937@gmail.com">thddydgnl1937@gmail.com</a>
+        <a href="https://github.com/thddydgnl" target="_blank" rel="noopener">github.com/thddydgnl</a>
+        <a href="https://www.linkedin.com/in/yonghwi-song-115395411/" target="_blank" rel="noopener">linkedin.com/in/yonghwi-song</a>
+        <button id="phone" type="button" data-a="NzM5MS03ODI4LTAxIDI4Kw==" data-b="NzM5MTc4MjgwMTI4Kw==">Show phone number</button>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="navbar">
+      <div class="navscroll">
+        <a href="#research">Research</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#competitions">Competitions</a>
+        <a href="#awards">Awards</a>
+        <a href="#skills">Skills</a>
+      </div>
+      <button class="themetoggle" id="theme-toggle" type="button" aria-label="Switch colour theme">
+        <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.4v2.4M12 19.2v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.4 12h2.4M19.2 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+        <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" hidden><path d="M20.5 14.6A8.6 8.6 0 1 1 9.4 3.5a6.9 6.9 0 0 0 11.1 11.1z"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <p class="intro">
+    I am an undergraduate researcher at Chungbuk National University and a research intern at the
+    Artificial Intelligence Laboratory. My work centres on <strong>world models and world-action
+    models</strong> — how an agent can hold a compact internal model of its environment and read
+    actions out of it cheaply — and on <strong>tool-using language models</strong> that stay reliable
+    when real users speak indirectly. <em>Previously I worked on multimodal reinforcement learning for
+    autonomous driving at the MIP Lab.</em>
+  </p>
+
+  <section id="research">
+    <h2>Research Interests</h2>
+    <div class="entry">
+      <div class="when">Focus</div>
+      <div class="what">
+        <div class="tags">
+          <span>World Models &amp; World Action Models</span>
+          <span>Agentic AI</span>
+          <span>Tool-Using Language Models</span>
+          <span>LLMs / sLMs</span>
+          <span>Multimodal Learning</span>
+          <span>Multimodal Foundation Models</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="entry">
+      <div class="when">Mar. 2023 —<br>Present</div>
+      <div class="what">
+        <h3>B.S. in Information and Communication Engineering</h3>
+        <p class="where">Chungbuk National University, School of Information and Communication Engineering · Cheongju, Korea</p>
+        <p class="gpa">GPA 3.83 / 4.5</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Research Experience</h2>
+
+    <div class="entry">
+      <div class="when">Jun. 2026 —<br>Present</div>
+      <div class="what">
+        <h3>Research Intern</h3>
+        <p class="where">Artificial Intelligence Laboratory (AI Lab), Chungbuk National University</p>
+        <p>Conducting research on agentic AI, tool-using language models, and efficient world / world-action models.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Mar. 2025 —<br>Jun. 2026</div>
+      <div class="what">
+        <h3>Research Student</h3>
+        <p class="where">Multimedia Information Processing (MIP) Laboratory, Chungbuk National University</p>
+        <p>Research on autonomous driving and multimodal reinforcement learning.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Jan. 2026 —<br>Present</div>
+      <div class="what">
+        <h3>Advanced Division Leader, Applied Machine Learning</h3>
+        <p class="where">HyperCore AI &amp; Data Analytics Club</p>
+        <p>Led machine learning study sessions and supported AI project development.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="publications">
+    <h2>Publications &amp; Manuscripts</h2>
+
+    <p class="subhead">Under Review</p>
+    <ol class="pubs">
+      <li>
+        <span class="status">ARR 2026</span>
+        <div>
+          <p class="ptitle">K-PragShift: Diagnosing Korean Pragmatic Revisions in Tool-Using Language Models</p>
+          <p class="authors"><span class="me">Song, YongHwi</span>*</p>
+          <p class="venue">Under review at ACL Rolling Review (ARR), August 2026.</p>
+        </div>
+      </li>
+      <li>
+        <span class="status">KTCP 2026</span>
+        <div>
+          <p class="ptitle">Shapley-style Contribution-Guided Sensor Fusion for Robust Reinforcement Learning-Based Autonomous Driving</p>
+          <p class="authors"><span class="me">Song, YongHwi</span>*</p>
+          <p class="venue">Submitted to KIISE Transactions on Computing Practices (KTCP), 2026.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="subhead">In Preparation</p>
+    <ol class="pubs">
+      <li>
+        <span class="status quiet">In prep.</span>
+        <div>
+          <p class="ptitle">Lightweight Action Readout from Multi-Level World Representations for Efficient DriveWAM</p>
+          <p class="authors"><span class="me">Song, YongHwi</span>*</p>
+          <p class="venue">Ongoing research toward a manuscript, 2026.</p>
+        </div>
+      </li>
+      <li>
+        <span class="status quiet">In prep.</span>
+        <div>
+          <p class="ptitle">A Comparative Survey of Domestic and International Reinforcement Learning Research for Autonomous Driving</p>
+          <p class="authors"><span class="me">Song, YongHwi</span>*</p>
+          <p class="venue">Manuscript in preparation, 2026.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="subhead">Conference Presentations</p>
+    <ol class="pubs">
+      <li>
+        <span class="status quiet">Planned</span>
+        <div>
+          <p class="ptitle">Title TBD</p>
+          <p class="venue">2026 Fall Conference of KIIS, Poster Presentation (planned), 2026.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="subhead">Additional Publications</p>
+    <ol class="pubs">
+      <li>
+        <span class="status quiet">2020</span>
+        <div>
+          <p class="ptitle">A Comparative Study on the Prevalence of Forensic Flies Using Chicken Corpse</p>
+          <p class="authors">Hyeban Namgung, Kuk Seorin, Park Geonwoo, Bae Seohyun, <span class="me">Song Yonghwi</span>, Lee Hyesong, Han Jian, Hyojoong Kim</p>
+          <p class="venue">Journal of Science Education for the Gifted, 2020.</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="fnote">* First author.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="when">Jan. 2026 —<br>Present</div>
+      <div class="what">
+        <h3>Lightweight Action Readout for Efficient DriveWAM</h3>
+        <p class="where">Research Project</p>
+        <p>Investigating efficient action prediction by extracting lightweight action representations from multi-level world representations.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Jun. 2025 —<br>Jun. 2026</div>
+      <div class="what">
+        <h3>Shapley-guided Multimodal Reinforcement Learning for Autonomous Driving</h3>
+        <p class="where">Faculty-Supervised Research Project</p>
+        <p>Implemented Shapley-guided multimodal fusion over RGB, LiDAR, route, and ego-state inputs.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Sep. 2025 —<br>Present</div>
+      <div class="what">
+        <h3>A Comparative Survey of Domestic and International RL Research for Autonomous Driving</h3>
+        <p class="where">Independent Research Project</p>
+        <p>Analysed 93 reinforcement-learning-based autonomous driving studies and summarised the key research trends.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Mar. 2026 —<br>Jun. 2026</div>
+      <div class="what">
+        <h3>Multi-Agent Vehicle Trajectory Prediction on Argoverse 2</h3>
+        <p class="where">Personal Project</p>
+        <p>Implemented trajectory prediction models on the Argoverse 2 Motion Forecasting dataset.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Jul. 2026</div>
+      <div class="what">
+        <h3>Folding — Local-First Document Agent</h3>
+        <p class="where">Team Project</p>
+        <p>Developed a local-first document agent for retrieving, connecting, and safely editing heterogeneous documents.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">May 2026</div>
+      <div class="what">
+        <h3>Solar TutorBoard — AI-Powered Personalised Learning Platform</h3>
+        <p class="where">Upstage MixUp Agent Hackathon</p>
+        <p>Built AI-agent workflows and backend infrastructure for an educational AI platform.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="competitions">
+    <h2>Competitions &amp; Hackathons</h2>
+
+    <div class="entry">
+      <div class="when">Aug. — Sep.<br>2026</div>
+      <div class="what">
+        <h3>LG Aimers 9th Cohort — KBO Pitch Control Success Probability Prediction</h3>
+        <p class="where">Advanced to Phase 2 Online AI Hackathon · Top 20%</p>
+        <p>Predicted pitch-control success probabilities from game context, player history, and tracking data.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Jul. — Sep.<br>2026</div>
+      <div class="what">
+        <h3>2026 National Institute of Korean Language AI-Malpyung — Argumentative Writing Scoring</h3>
+        <p class="where">23rd in the preliminary round · advanced to the 50-team final arena</p>
+        <p>Developed an AI system for automated evaluation of Korean argumentative writing.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">Jul. 2026</div>
+      <div class="what">
+        <h3>2026 CODEGATE AI Startup Hackathon</h3>
+        <p class="where">Finalist · one of ~20 teams selected for the offline hackathon and demo day</p>
+        <p>Intensive development and validation of an AI-based startup MVP.</p>
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="when">2026</div>
+      <div class="what">
+        <h3>Upstage × BDAI Agent Development Hackathon</h3>
+        <p class="where">Finalist — Solar TutorBoard</p>
+        <p>Built a Solar Pro3-based multi-agent platform for tutoring operations: lesson reports, payment reminders, and schedule coordination.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="awards">
+    <h2>Awards &amp; Scholarships</h2>
+
+    <div class="entry">
+      <div class="when">Sep. 2025 —<br>Mar. 2026</div>
+      <div class="what">
+        <h3>Undergraduate Research Assistant Scholarship</h3>
+        <p class="where">Chungbuk National University</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">Mar. 2026</div>
+      <div class="what">
+        <h3>Academic Excellence Scholarship</h3>
+        <p class="where">Chungbuk National University</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">Mar. 2024</div>
+      <div class="what">
+        <h3>Academic Excellence Scholarship</h3>
+        <p class="where">Chungbuk National University</p>
+      </div>
+    </div>
+    <div class="entry">
+      <div class="when">Sep. 2023</div>
+      <div class="what">
+        <h3>Academic Excellence Scholarship</h3>
+        <p class="where">Chungbuk National University</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills &amp; Tools</h2>
+
+    <dl class="skills">
+      <dt>Programming</dt>
+      <dd class="tags"><span>Python</span><span>C / C++</span><span>Java</span></dd>
+    </dl>
+    <dl class="skills">
+      <dt>ML Frameworks</dt>
+      <dd class="tags"><span>PyTorch</span><span>TensorFlow</span><span>scikit-learn</span><span>Stable-Baselines3</span></dd>
+    </dl>
+    <dl class="skills">
+      <dt>World Models &amp; RL</dt>
+      <dd class="tags"><span>World Models</span><span>World Action Models</span><span>Reinforcement Learning</span><span>Model-Based RL</span><span>Actor-Critic Methods</span><span>Multimodal Policy Learning</span></dd>
+    </dl>
+    <dl class="skills">
+      <dt>LLMs &amp; Agentic AI</dt>
+      <dd class="tags"><span>LLMs / sLMs</span><span>Agentic AI</span><span>Tool-Using LMs</span><span>Multi-Agent Systems</span><span>Structured LLM Outputs</span><span>Local LLM Inference</span></dd>
+    </dl>
+    <dl class="skills">
+      <dt>Multimodal &amp; Embodied</dt>
+      <dd class="tags"><span>Multimodal Learning</span><span>Sensor Fusion</span><span>Computer Vision</span><span>Embodied AI</span><span>Physical AI</span><span>Trajectory Prediction</span></dd>
+    </dl>
+    <dl class="skills">
+      <dt>Driving &amp; Simulation</dt>
+      <dd class="tags"><span>CARLA</span><span>Argoverse 2</span><span>ManiSkill</span><span>Motion Forecasting</span><span>Robotic Manipulation</span></dd>
+    </dl>
+    <dl class="skills">
+      <dt>Systems</dt>
+      <dd class="tags"><span>Git</span><span>Linux</span><span>FastAPI</span><span>Supabase</span><span>Ollama</span><span>LM Studio</span><span>REST APIs</span></dd>
+    </dl>
+  </section>
+
+  <footer>
+    <span>YongHwi Song · Cheongju, Korea</span>
+    <span>Last updated September 2026 · <a href="mailto:thddydgnl1937@gmail.com">thddydgnl1937@gmail.com</a></span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme-toggle'),
+      sun=document.getElementById('icon-sun'),moon=document.getElementById('icon-moon');
+
+  function paint(t){
+    root.setAttribute('data-theme',t);
+    sun.hidden=(t==='dark'); moon.hidden=(t!=='dark');
+    btn.setAttribute('aria-label',t==='dark'?'Switch to light mode':'Switch to dark mode');
+  }
+  paint(root.getAttribute('data-theme')==='dark'?'dark':'light');
+
+  btn.addEventListener('click',function(){
+    var next=root.getAttribute('data-theme')==='dark'?'light':'dark';
+    paint(next);
+    try{ localStorage.setItem('cv-theme',next); }catch(e){}
+  });
+
+  // Phone stays out of the page source: assembled only on a real click.
+  var ph=document.getElementById('phone');
+  ph.addEventListener('click',function(){
+    function dec(v){ return atob(v).split('').reverse().join(''); }
+    var a=document.createElement('a');
+    a.className='revealed';
+    a.rel='nofollow';
+    a.href='tel:'+dec(ph.dataset.b);
+    a.textContent=dec(ph.dataset.a);
+    ph.replaceWith(a);
+  });
+})();
+</script>
+</body>
+</html>
