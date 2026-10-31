@@ -246,6 +246,8 @@
   }
   .what p{margin:0;color:var(--ink-soft);font-size:.9rem;max-width:60ch}
   .what p + p{margin-top:6px}
+  .what ul.details{margin:6px 0 0;padding-left:1.1em;color:var(--ink-soft);font-size:.9rem;max-width:60ch}
+  .what ul.details li + li{margin-top:4px}
   .gpa{
     font-family:var(--mono);
     font-size:.78rem;
@@ -512,7 +514,12 @@
       <div class="what">
         <h3>Research Intern</h3>
         <p class="where">Artificial Intelligence Laboratory (AI Lab), Chungbuk National University · Advisor: Prof. Keon Myung Lee</p>
-        <p>Conducting research on agentic AI, tool-using language models, and efficient world/world-action models.</p>
+        <p>Conducting research on efficient world and world-action models and on world models for tool-using language agents.</p>
+        <ul class="details">
+          <li>Showed that MPPI planners exploit deterministic rounding error in low-bit TD-MPC2 world models; training-free dithering removed a median 95% of the success drop on Meta-World.</li>
+          <li>Found that latent world-model imagination blurs near misses: on DINO-WM PushT, success-vs-near-miss AUROC fell from 0.953 to 0.853, while far misses stayed separable.</li>
+          <li>Showed that a frozen decision model, JEV, works as an LLM agent&#39;s world model without task training, reaching 93.4% success in TextWorld vs. 79.5% for a failure-memory baseline.</li>
+        </ul>
       </div>
     </div>
 
@@ -521,7 +528,10 @@
       <div class="what">
         <h3>Research Intern</h3>
         <p class="where">Multimedia Information Processing (MIP) Laboratory, Chungbuk National University · Advisor: Prof. Hyun Soo Kang</p>
-        <p>Research on Autonomous Driving and Multimodal Reinforcement Learning.</p>
+        <p>Conducted research on multimodal reinforcement learning for autonomous driving.</p>
+        <ul class="details">
+          <li>Designed and implemented RCS-AC, a CARLA driving actor-critic that gates RGB, LiDAR, route, and ego-state features by sensor reliability, risk, and Shapley contribution.</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -557,15 +567,15 @@
         <div>
           <p class="ptitle">Planners Exploit Deterministic Error: Dithered Low-Bit World Models</p>
           <p class="authors"><span class="me">Song, YongHwi</span>* and Lee, Keon Myung</p>
-          <p class="venue">Submitted to the Korean Artificial Intelligence Association (KAIA) Conference (poster), 2026.</p>
+          <p class="venue">Submitted to the Korean Artificial Intelligence Association (KAIA) Conference (poster), 2026. Extended version to be submitted to Robotics: Science and Systems (RSS) 2027.</p>
         </div>
       </li>
       <li>
         <span class="status">KAIA 2026</span>
         <div>
-          <p class="ptitle">Near-Miss Blindness: Latent World-Model Imagination Loses the Outcome Boundary</p>
+          <p class="ptitle">Near-Miss Blindness: Latent World-Model Imagination Loses Resolution at the Outcome Boundary</p>
           <p class="authors"><span class="me">Song, YongHwi</span>* and Lee, Keon Myung</p>
-          <p class="venue">Submitted to the Korean Artificial Intelligence Association (KAIA) Conference (poster), 2026.</p>
+          <p class="venue">Submitted to the Korean Artificial Intelligence Association (KAIA) Conference (poster), 2026. Extended version to be submitted to Transactions on Machine Learning Research (TMLR).</p>
         </div>
       </li>
       <li>
@@ -576,34 +586,10 @@
           <p class="venue">Submitted to the Korean Artificial Intelligence Association (KAIA) Conference (poster), 2026.</p>
         </div>
       </li>
-      <li>
-        <span class="status">KIIS 2026</span>
-        <div>
-          <p class="ptitle">A Decision Model as a World Model: Comparing JEV with Generative LLMs for LLM Agents</p>
-          <p class="authors"><span class="me">Song, YongHwi</span>* and Lee, Keon Myung</p>
-          <p class="venue">Submitted to the 2026 Fall Conference of the Korean Institute of Intelligent Systems (KIIS), 2026.</p>
-        </div>
-      </li>
     </ol>
 
     <p class="subhead">In Preparation</p>
     <ol class="pubs">
-      <li>
-        <span class="status quiet">RSS 2027</span>
-        <div>
-          <p class="ptitle">Planners Exploit Deterministic Error: Dithered Low-Bit World Models</p>
-          <p class="authors"><span class="me">Song, YongHwi</span>* and Lee, Keon Myung</p>
-          <p class="venue">To be submitted to Robotics: Science and Systems (RSS) 2027.</p>
-        </div>
-      </li>
-      <li>
-        <span class="status quiet">TMLR</span>
-        <div>
-          <p class="ptitle">Near-Miss Blindness: Latent World-Model Imagination Loses the Outcome Boundary</p>
-          <p class="authors"><span class="me">Song, YongHwi</span>* and Lee, Keon Myung</p>
-          <p class="venue">To be submitted to Transactions on Machine Learning Research (TMLR).</p>
-        </div>
-      </li>
       <li>
         <span class="status quiet">EACL SRW 2027</span>
         <div>
@@ -618,6 +604,18 @@
           <p class="ptitle">Imagine Once, Act Fast: Lightweight Action Readout from a Frozen Driving World-Action Model</p>
           <p class="authors"><span class="me">Song, YongHwi</span>* and Lee, Keon Myung</p>
           <p class="venue">To be submitted to Transactions on Machine Learning Research (TMLR).</p>
+        </div>
+      </li>
+    </ol>
+
+    <p class="subhead">Conference Presentations</p>
+    <ol class="pubs">
+      <li>
+        <span class="status quiet">KIIS 2026</span>
+        <div>
+          <p class="ptitle">A World Model for LLM Agents: Comparing a Decision Model with General-Purpose LLMs</p>
+          <p class="authors"><span class="me">Song, YongHwi</span>* and Lee, Keon Myung</p>
+          <p class="venue">Oral presentation, 2026 Fall Conference of the Korean Institute of Intelligent Systems (KIIS).</p>
         </div>
       </li>
     </ol>
@@ -670,9 +668,9 @@
     <div class="entry">
       <div class="when">Mar. 2026 —<br>Jun. 2026</div>
       <div class="what">
-        <h3><a href="https://github.com/thddydgnl/vehicle-trajectory-prediction-av2" target="_blank" rel="noopener">Multi-Agent Vehicle Trajectory Prediction on Argoverse 2</a></h3>
+        <h3><a href="https://github.com/thddydgnl/vehicle-trajectory-prediction-av2" target="_blank" rel="noopener">Vehicle and Pedestrian Trajectory Forecasting on Argoverse 2</a></h3>
         <p class="where">Personal Project</p>
-        <p>Implemented trajectory prediction models using the Argoverse 2 Motion Forecasting dataset.</p>
+        <p>Compared linear, LSTM, Transformer, and diffusion trajectory forecasters; PCA latent diffusion reached a minFDE of 0.86 at K=16.</p>
       </div>
     </div>
 
@@ -833,7 +831,7 @@
 
   <footer>
     <span>YongHwi Song · Cheongju, Korea</span>
-    <span>Last updated October 28, 2026 · <a href="mailto:thddydgnl1937@gmail.com">thddydgnl1937@gmail.com</a></span>
+    <span>Last updated October 31, 2026 · <a href="mailto:thddydgnl1937@gmail.com">thddydgnl1937@gmail.com</a></span>
   </footer>
 
 </div>
